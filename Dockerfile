@@ -1,7 +1,7 @@
 FROM node:latest as node
 WORKDIR /app
 ENV PATH /usr/src/app/node_modules/.bin:$PATH
-COPY .. .
+COPY . .
 RUN npm install
 ARG ANGULAR_ENV=qas
 RUN ng build  --configuration $ANGULAR_ENV
