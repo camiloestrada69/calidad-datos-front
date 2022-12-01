@@ -1,0 +1,83 @@
+<div class="adminDatos">
+  <div class="adminHeader">
+
+    <div class="adminHeader__consulta">
+      <label class="adminHeader__label">
+        {{'MENU.BUSINESS_ENTITIES.ENTITIES.DATA_MANAGEMENT.GET_INTO_QUERY' | translate}}
+      </label>
+      <div class="adminHeader__inputRun">
+        <input class="form-control adminHeader__input" placeholder="Query" type="text">
+        <a href="#" class="adminHeader__run">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.905 19.592">
+            <path id="Icon_feather-play" data-name="Icon feather-play" d="M7.5,3a1.5,1.5,0,0,1,.811.238l12.9,8.3a1.5,1.5,0,0,1,0,2.524l-12.9,8.3A1.5,1.5,0,0,1,6,21.092V4.5A1.5,1.5,0,0,1,7.5,3Zm10.131,9.8L9,7.248v11.1Z" transform="translate(-6 -3)" fill="#e3001e"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="adminHeader__checkbox">
+  
+      <div class="adminHeader__check form-check form-switch" dir="ltr">
+        <input class="form-check-input adminHeader__inputCheckbox" type="checkbox" id="SwitchCheckSizemd1">
+        <label class="form-check-label" adminHeader__label for="SwitchCheckSizemd1">
+          {{'MENU.BUSINESS_ENTITIES.ENTITIES.DATA_MANAGEMENT.SINGLE_ENTITIES' | translate}}
+        </label>
+      </div>
+
+      <div class="adminHeader__check form-check form-switch" dir="ltr">
+        <input class="form-check-input adminHeader__inputCheckbox" type="checkbox" id="SwitchCheckSizemd">
+        <label class="form-check-label adminHeader__label" for="SwitchCheckSizemd">
+          {{'MENU.BUSINESS_ENTITIES.ENTITIES.DATA_MANAGEMENT.POSSIBLE_DUPLICATES' | translate}}
+        </label>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="adminCantidad">
+    <div class="adminCantidad__wrapperCantidad dataTables_length" id="tickets-table_length">
+      <label class="adminCantidad__label">{{'GENERAL.QUANTITY_DATES' | translate}}</label> <span class="adminCantidad__numero">{{files1.length}} items</span>
+    </div>
+  </div>
+
+  <p-treeTable class="adminTabla" [value]="files1" [columns]="cols" [scrollable]="true">
+    
+    <ng-template pTemplate="colgroup" let-columns>
+      <colgroup>
+        <col *ngFor="let col of columns">
+      </colgroup>
+    </ng-template>
+
+    <ng-template pTemplate="header" let-columns>
+      <tr>
+        <th *ngFor="let col of columns">
+          {{col.header | translate}}
+        </th>
+      </tr>
+      <tr>
+        <th *ngFor="let col of cols">
+          <input class="form-control" pInputText type="text" [(ngModel)]="filtro">
+        </th>
+      </tr>
+    </ng-template>
+    
+    <ng-template pTemplate="body" let-rowNode let-rowData="rowData" let-columns="columns">
+      <tr>
+        <td *ngFor="let col of columns; let i = index">
+          <p-treeTableToggler [rowNode]="rowNode" *ngIf="i == 0"></p-treeTableToggler>
+          <div *ngIf="col.field === 'fechaNacimiento'">{{rowData[col.field] | date}}</div>
+          <div *ngIf="col.field !== 'fechaNacimiento'">{{rowData[col.field]}}</div>
+        </td>
+      </tr>
+    </ng-template>
+
+  </p-treeTable>
+
+  <app-footer-pagination [totalElements]="files1.length"></app-footer-pagination>
+</div>
+
+
+
+
+

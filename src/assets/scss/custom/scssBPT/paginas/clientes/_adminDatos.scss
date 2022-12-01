@@ -1,0 +1,172 @@
+.adminDatos{
+    .adminHeader{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include media(xs){
+            flex-direction: column;
+            justify-content: center;
+            row-gap: 1rem;
+        }
+    }
+
+    .adminHeader__consulta{
+        flex-grow: 1;
+        max-width: 550px;
+    }
+
+    .adminHeader__inputRun{
+        position: relative;
+    }
+
+    .adminHeader__run{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: .8rem;
+
+        svg{
+            width: .8rem;
+        }
+    }
+
+    .adminHeader__input{
+        border-radius: 8px;
+    }
+
+    .adminHeader__checkbox{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: .5rem;
+        
+        @include media(xs){
+            justify-content: center;
+        }
+    }
+
+
+    .adminHeader__check{
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+        cursor: pointer;
+        
+        @include media(xs){
+            padding: 0;
+        }
+    }
+
+    label{
+        color: $textColor;
+    }
+
+    .adminCantidad{
+        margin: 1rem 0;
+    }
+
+    .adminCantidad__label{
+        font-family: semibold;
+        font-size: .9rem;
+        margin-right: .5rem;
+    }
+
+    .adminCantidad__numero{
+        padding-left: .5rem;
+        font-size: .9rem;
+        color: $textColor;
+        font-family: regular;
+        border-left: solid 2px $grisCustomer;
+    }
+
+    .adminTabla{
+        margin-bottom: 2rem;
+        display: block;
+        .p-treetable-scrollable-header{
+            background: none;
+
+            .p-treetable-scrollable-header-box{
+                padding: 0 !important;
+            }
+            
+            .p-treetable-thead{
+
+                tr{
+                    line-height: 1;
+                    &:last-child{
+                        margin-top: 0rem;
+                    }
+                }
+                th{
+                    font-family: light;
+                    color: $textColor;
+                    font-size: .9rem;
+                    background: none;
+                    padding: 0 .5rem;
+                    border: none;
+
+                    &:first-child{
+                        padding-left: 0;
+                    }
+
+                    &:last-child{
+                        padding-right: 0;
+                    }
+
+                    input{
+                        margin-top: .2rem;
+                        padding: .3rem .5rem;
+                    }
+                }
+            }
+        }
+
+        .p-treetable-scrollable-body{
+            margin-top: .5rem;
+            border: solid 1px $grisCustomer;
+            tr{
+                border-bottom: solid 1px $grisCustomer;
+            }
+            td{
+                padding: 0 .5rem;
+                margin: .5rem 0;
+                border: none;
+                color: $textColor;
+                font-family: semibold;
+                font-size: .9rem;
+                line-height: 1;
+                text-align: right;
+
+                &:first-child{
+                    padding-left: .5rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    >div{
+                        display: flex;
+                        align-items: center;
+                        gap: .3rem;
+                        &::before{
+                            content: '';
+                            display: block;
+                            height: 6px;
+                            width: 6px;
+                            border-radius: 100px;
+                            background-color: #00BF78;
+                        }
+                    }
+                }
+
+                &:last-child{
+                    padding-right: .5rem;
+                }
+
+                button{
+                    margin: 0 !important;
+                }
+            }
+        }
+    }
+}

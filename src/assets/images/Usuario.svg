@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
+  <g id="Grupo_40874" data-name="Grupo 40874" transform="translate(-1212.542 -9.376)">
+    <g id="Elipse_3197" data-name="Elipse 3197" transform="translate(1212.542 9.376)" fill="#fff" stroke="#000" stroke-width="1">
+      <circle cx="7" cy="7" r="7" stroke="none"/>
+      <circle cx="7" cy="7" r="6.5" fill="none"/>
+    </g>
+    <circle id="Elipse_3198" data-name="Elipse 3198" cx="1" cy="1" r="1" transform="translate(1215.542 15.376)" fill="#24292f"/>
+    <circle id="Elipse_3199" data-name="Elipse 3199" cx="1" cy="1" r="1" transform="translate(1218.542 15.376)" fill="#24292f"/>
+    <circle id="Elipse_3200" data-name="Elipse 3200" cx="1" cy="1" r="1" transform="translate(1221.542 15.376)" fill="#24292f"/>
+  </g>
+</svg>

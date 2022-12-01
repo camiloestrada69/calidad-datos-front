@@ -1,0 +1,49 @@
+<form class="configConexion" [formGroup]="form">
+  <div class="row configConexion__flex">
+
+    <div class="contenidoInput">
+      <label for="nombre" class="form-label contenidoInput__label">{{'MENU.CONFIGURATIONS.CONNECTIONS.NAME' | translate}} <span class="contenidoInput__asterisco">*</span></label>
+      <input class="form-control contenidoInput__input" type="text" placeholder="Nombre" id="nombre" formControlName="nombre">
+    </div>
+
+    <div class="contenidoInput">
+      <label class="form-label contenidoInput__label">{{'MENU.CONFIGURATIONS.CONNECTIONS.FONT' | translate}} <span class="contenidoInput__asterisco">*</span></label>
+      <select class="form-select" [(ngModel)]="fuenteSelecionada" formControlName="fuente" (ngModelChange)="seleccionarFuente($event)">
+        <option *ngFor="let item of fuentes"
+                [ngValue]="item" [selected]="fuenteSelecionada === item">{{item}}</option>
+      </select>
+    </div>
+
+    <div class="contenidoInput">
+      <label for="url" class="form-label contenidoInput__label">{{'MENU.CONFIGURATIONS.CONNECTIONS.URL' | translate}}</label>
+      <input class="form-control contenidoInput__input" type="text" placeholder="Url" id="url" formControlName="url">
+    </div>
+
+    <div class="contenidoInput">
+      <label class="form-label contenidoInput__label">{{'MENU.CONFIGURATIONS.CONNECTIONS.ENVIRONMENT' | translate}} <span class="contenidoInput__asterisco">*</span></label>
+      <select class="form-select" [(ngModel)]="ambienteSelecionado" formControlName="ambiente" (ngModelChange)="seleccionarAmbiente($event)">
+        <option *ngFor="let item of ambientes"
+                [ngValue]="item" [selected]="ambienteSelecionado === item">{{item}}</option>
+      </select>
+      <!--<select class="form-select" formControlName="ambiente" (ngModelChange)="seleccionarAmbiente($event)">
+        <option *ngFor="let item of ambientes" [ngValue]="item">{{item}}</option>
+      </select>-->
+    </div>
+
+    <div class="contenidoInput">
+      <label for="usuario" class="form-label contenidoInput__label">{{'MENU.CONFIGURATIONS.CONNECTIONS.USER' | translate}}</label>
+      <input class="form-control contenidoInput__input" type="text" placeholder="Artisanal kale" id="usuario" formControlName="usuario">
+    </div>
+
+    <div class="contenidoInput">
+      <label for="password" class="form-label contenidoInput__label">{{'MENU.CONFIGURATIONS.CONNECTIONS.PASSWORD'  | translate}}</label>
+      <input class="form-control contenidoInput__input" type="text" placeholder="Artisanal kale" id="password" formControlName="password">
+    </div>
+
+    <div class="configConexion__botones">
+      <button type="button" (click)="probarConexion()" class="botonRojo">{{'BUTTONS.TEST_CONNECTION'  | translate}}</button>
+      <a [routerLink]="urlConexiones" class="botonUnderline">{{'BUTTONS.CANCEL_CREATION' | translate}}</a>
+    </div>
+  </div>
+</form>
+

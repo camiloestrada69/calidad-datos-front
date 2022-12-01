@@ -1,0 +1,56 @@
+.tableResponsive{
+    margin: 1.5rem 0;
+
+    .botonAzul, .botonNaranja{
+        padding: .3rem 1.5rem;
+    }
+}
+
+.tableResponsive__bodyInfo{
+    font-family: semiBold;
+}
+
+.tableResponsive__bodyText{
+    font-family: regular;
+}
+
+.tableResponsive__bodyInfo--calidad{
+    ngb-highlight{
+        font-family: bold;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: .3rem;
+        &::before{
+            content: '';
+            display: block;
+            height: 6px;
+            width: 6px;
+            border-radius: 100px;
+            background-color: #00BF78;
+        }
+    }
+}
+
+.tableResponsive__headerTitulo--none{
+    &::before, &::after{
+        display: none;
+    }
+}
+
+.tableResponsive__bodyButton{
+    margin: .5rem;
+    opacity: .5;
+    transition: opacity .2s ease;
+    &:hover{
+        opacity: 1;
+    }
+    svg{
+        width: 15px;
+    }
+}
+
+.tableResponsive__bodyInfo--actions{
+    text-align: right;
+    display: flex;
+}

@@ -1,0 +1,48 @@
+.pasos{
+    position: relative;
+    justify-content: space-evenly;
+    .pasos__paso{
+        position: initial;
+        z-index: 2;
+    }
+
+    .pasos__boton{
+        padding: 0;
+        flex-direction: column;
+        &:hover{
+            background-color: transparent;
+        }
+    }
+
+    .pasos__texto{
+        font-family: light;
+        font-size: 1rem;
+        color: $textColor;
+    }
+
+    .pasos__linea{
+        margin: 0;
+        height: 1px;
+        background-color: $grisInput;
+        position: absolute;
+        top: 20px;
+        left: 25%;
+        right: 22%;
+        z-index: 1;
+    }
+
+    .pasos__circulo{
+        color: $grisInput;
+        background-color: $blancoPrincipal;
+        border: solid 1px $grisInput;
+    }
+
+    
+    .pasos__paso.active{
+        .pasos__circulo{
+            color: $blancoPrincipal;
+            border-color: $rojoPrincipal;
+            background-color: $rojoPrincipal;
+        }
+    }
+}

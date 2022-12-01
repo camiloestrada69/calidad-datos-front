@@ -1,0 +1,25 @@
+<div id="layout-wrapper">
+    <!-- Side Bar -->
+    <div class="menuLateral__Flex">
+
+        <app-sidebar></app-sidebar>
+
+        <div class="menuSection">
+        <!-- Top Bar -->
+        <app-topbar (mobileMenuButtonClicked)="onToggleMobileMenu()" (settingsButtonClicked)="onSettingsButtonClicked()">
+        </app-topbar>
+
+        <div class="main-content" id="mainContent">
+        </div>
+            <div class="page-content">
+                <div class="container-fluid">
+                    <!-- content -->
+                    <router-outlet></router-outlet>
+                </div>
+            </div>
+            <!-- footer -->
+            <!--<app-footer></app-footer>-->
+        </div>
+    </div>
+</div>
+<app-rightsidebar></app-rightsidebar>

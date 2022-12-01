@@ -1,0 +1,87 @@
+.nuevaRegla{
+
+    .nuevaRegla__campos{
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        padding: 1rem 0;
+        border-bottom: solid 1px $grisInput;
+
+        @include media(md){
+            justify-content: space-evenly;
+        }
+    }
+
+    .contenidoInput{
+        width: 29%;
+        min-width: 250px;
+    }
+
+    .contenidoInput__label{
+        width: 100%;
+    }
+}
+
+.nuevaRegla{
+
+    .dataLenght, .blackValue{
+        width: 100%;
+        padding-left: 1rem;
+
+        @include media(xs){
+            padding: .5rem;
+        }
+    }
+
+    .nuevaRegla__campos--lenght, .nuevaRegla__campos--black{
+        padding-top: .5rem;
+        padding-bottom: 0;
+        border-bottom: none;
+
+        @include media(sm){
+            flex-wrap: wrap;
+            gap:.5rem;
+
+            .contenidoInput{
+                min-width: 240px;
+            }
+            
+        }
+    }
+
+    .dataLenght__title, .blackValue__title{
+        color: $grisInput;
+        font-family: bold;
+        font-size: 1.3rem;
+    }
+
+    .dataLenght__wrapperRadio, .blackValue__wrapperRadio{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        align-items: center;
+        margin-top: .5rem;
+
+        @include media(md){
+            gap: .5rem;
+        }
+    }
+    
+}
+
+.nuevaRegla{
+
+    .blackValue__checkBox{
+        margin-top: 1rem;
+        width: max-content;
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+
+        input[type=checkbox].form-check-input{
+            width: 1.3rem;
+            height: 1rem;
+        }
+    }
+}

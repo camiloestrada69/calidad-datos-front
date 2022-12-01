@@ -1,0 +1,37 @@
+.conexionCreada{
+
+    .conexionCreada__filtros{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 10px;
+        padding: 0 2rem;
+        margin: .5rem 0;
+    }
+
+    .conexionCreada__enumerador{
+        label{
+            font-family: bold;
+        }
+
+        .conexionCreada__item{
+            margin-left: .5rem;
+            padding-left: .5rem;
+            border-left: solid 1px $grisCustomer;
+            font-family: regular;
+        }
+    }
+
+    label{
+        margin: 0;
+    }
+
+    .conexionCreada__boton{
+        width: max-content;
+        padding: .5rem 1rem;
+        background-color: $rojoPrincipal;
+        color: $blancoPrincipal;
+        border: none;
+        border-radius: 100px;
+    }
+}

@@ -1,0 +1,67 @@
+<div class="crearUso navInterna-clientes">
+  <div class="navInterna-clientes__header">
+    <div class="crearUso__breadTitle">
+      <app-breadcrumbs-items [breadcrumbItems]="breadCrumbItems"></app-breadcrumbs-items>
+      <h2 class="navInterna-clientes__title">{{'MENU.BUSINESS_ENTITIES.ENTITIES.USES.CREATE_USE' | translate}}</h2>
+    </div>
+
+    <div class="navInterna-clientes__botones">
+      <a (click)="$event" class="botonGris">{{'BUTTONS.CANCEL_CREATION' | translate}}</a>
+      <a (click)="$event" class="botonRojo botonRojo--activo">{{'BUTTONS.SAVE_USE' | translate}}</a>
+    </div>
+  </div>
+
+  <div class="crearUso__body">
+    <div class="crearUso__izq">
+
+      <div class="contenidoInput">
+        <label for="codigo" class="form-label contenidoInput__label">{{'MENU.BUSINESS_ENTITIES.ENTITIES.USES.CODE' | translate}} *</label>
+        <input class="form-control" type="text" placeholder="Ingresar código" id="codigo">
+      </div>
+
+      <div class="contenidoInput">
+        <label for="nombre" class="form-label contenidoInput__label">{{'MENU.BUSINESS_ENTITIES.ENTITIES.USES.NAME' | translate}} *</label>
+        <input class="form-control" type="text" placeholder="Ingresar nombre" id="nombre">
+      </div>
+
+      <div class="contenidoInput">
+        <label class="form-label contenidoInput__label">{{'MENU.BUSINESS_ENTITIES.ENTITIES.USES.STEWARD' | translate}} *</label>
+        <select class="form-select">
+          <option>Select</option>
+          <option>Large select</option>
+          <option>Small select</option>
+        </select>
+      </div>
+
+      <div class="contenidoInput">
+        <label for="concepto" class="form-label contenidoInput__label">{{'MENU.BUSINESS_ENTITIES.ENTITIES.USES.CONCEPT' | translate}} *</label>
+        <input class="form-control" type="text" placeholder="Url" id="concepto">
+      </div>
+
+    </div>
+    <div class="crearUso__der">
+      <h3 class="card-title">{{'MENU.BUSINESS_ENTITIES.ENTITIES.USES.ASSOCIATE_ATTRIBUTE' | translate}}</h3>
+      <div class="crearUso__checkboxs">
+
+        <div class="crearUso__check">
+          <input class="form-check-input form-check-input--rojo" type="checkbox" id="formCheck1">
+          <label class="form-check-label" for="formCheck1">Cliente</label>
+        </div>
+
+        <div class="crearUso__check">
+          <input class="form-check-input form-check-input--rojo" type="checkbox" id="formCheck2">
+          <label class="form-check-label" for="formCheck2">Identificación</label>
+        </div>
+
+        <div class="crearUso__check">
+          <input class="form-check-input form-check-input--rojo" type="checkbox" id="formCheck4">
+            <label class="form-check-label" for="formCheck4">ID_numerico</label>
+      </div>
+
+      <div class="add">
+        <h4>Nombre</h4>
+        <h4>Apellido</h4>
+      </div>
+    </div>
+  </div>
+</div>

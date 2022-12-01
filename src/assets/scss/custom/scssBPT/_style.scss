@@ -1,0 +1,207 @@
+@import "componentes/breackpoint";
+@import "componentes/variables";
+@import "componentes/breadcrumb";
+@import "componentes/mixins";
+@import "componentes/keywo";
+@import "componentes/elementoCreado";
+@import "componentes/botones";
+@import "componentes/calendar";
+@import "componentes/etiquetas";
+@import "componentes/wrapperFiltros";
+@import "componentes/contenidoInput";
+@import "componentes/tableReponsive/tableHeader";
+@import "componentes/tableReponsive/tableBody";
+@import "componentes/MenuSuperior/header";
+@import "componentes/MenuSuperior/notificacion";
+@import "componentes/MenuSuperior/buscador";
+@import "componentes/MenuSuperior/perfil";
+@import "componentes/menuLateral/Lateral";
+@import "componentes/menuLateral/lateralCollapsed";
+@import "componentes/menuLateral/customerGold";
+@import "componentes/menuLateral/enlaces";
+@import "componentes/menuLateral/enlaceEntidades";
+@import "componentes/pagination";
+@import "paginas/conexiones/pasos";
+@import "componentes/fonts";
+@import "paginas/bienvenida.scss";
+@import "paginas/conexiones/noConexion";
+@import "paginas/conexiones/creacionConexion";
+@import "paginas/conexiones/crearConexion";
+@import "paginas/conexiones/configConexion";
+@import "paginas/conexiones/conexionCreada";
+@import "paginas/clientes/headerClientes";
+@import "paginas/clientes/navClientes";
+@import "paginas/clientes/adminDatos";
+@import "paginas/clientes/componentesClientes";
+@import "paginas/clientes/nuevoATRB";
+@import "paginas/clientes/nuevaRegla";
+@import "paginas/clientes/crearUso";
+@import "paginas/clientes/crearFuente";
+@import "paginas/clientes/crearJobs";
+
+body{
+    background-color: $blancoPrincipal;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    &::-webkit-scrollbar{
+        width: 7px;
+        height: 7px;
+    }
+
+    &::-webkit-scrollbar-thumb{
+    background: $rojoPrincipal;
+    border-radius: 5px;
+    }
+}
+
+/*============ FONTS ============*/
+h1, h2, h3, h4, h5, h6, p{
+    color: #2E4765;
+    margin: 0;
+    line-height: 1.3;
+}
+
+b{
+    font-family: bold;
+}
+
+a{
+    cursor: pointer;
+}
+
+h1, p, a, span{
+    font-family: bold;
+    line-height: 1.1;
+}
+
+/*==================== INPUTS ================*/
+
+input, label{
+    font-family: regular;
+    margin: 0;
+}
+
+input[type=text], .form-select{
+    &:focus{
+        box-shadow: none;
+        border-color: $azulPrincipal;
+    }
+}
+
+input[type=checkbox].form-check-input{
+    width: 3rem;
+    height: 1.5rem;
+    margin: 0;
+    background-color: $fondoEntidades;
+    border: none;
+    cursor: pointer;
+
+    &:checked{
+        background-color: $azulPrincipal;
+        border: none;
+    }
+
+    &:focus{
+        box-shadow: none;
+    }
+}
+
+input[type=checkbox].form-check-input--rojo{
+            
+    width: 15px;
+    height: 15px;
+
+    &:checked{
+        background-color: $rojoPrincipal;
+    }
+}
+
+input[type=radio], input[type=radio].form-check-input{
+    position: relative;
+    margin-right: .6rem;
+    &:checked{
+        background-color: $rojoPrincipal;
+        border: none;
+        box-shadow: none;
+        background-image: none;
+        &::before{
+            content: '';
+            display: inline-block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 100px;
+            border: solid 2px $rojoPrincipal;
+        }
+    }
+}
+
+/*================ SELECT =====================*/
+select{
+    border: solid 2px $grisInput;
+    padding: .2rem .5em;
+    border-radius: 4px;
+    color: $azulPrincipal;
+    font-family: semibold;
+
+    &:focus-within{
+        border-color: $azulPrincipal;
+    }
+}
+
+.page-content{
+    padding: 1.5rem 2rem;
+
+    @include media(sm){
+        padding: 1rem;
+    }
+
+    .container-fluid{
+        padding: 0;
+    }
+}
+
+.menuLateral__Flex{
+    display: flex;
+    min-height: 100vh;
+}
+
+.menuSection{
+    width: 100%;
+    background-color: $colorFondo;
+    border-radius: 60px 0 0 60px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedor{
+    background-color: $blancoPrincipal;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: $boxShadow;
+    min-height: 80vh;
+}
+
+.contTituloBread{
+    flex-direction: column;
+}
+
+.tituloPagina{
+    margin: 0;
+    font-family: regular;
+    font-size: 1.3rem;
+    color: $azulPrincipal;
+    margin-top: 1.5rem;
+
+    @include media(lg){
+        text-align: center;
+    }
+}

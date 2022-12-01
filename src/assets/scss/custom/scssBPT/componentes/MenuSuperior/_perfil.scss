@@ -1,0 +1,47 @@
+.perfil{
+    padding: 0;
+    padding-left: 1rem;
+
+    display: flex;
+    align-items: center;
+}
+
+.perfil__contenido{
+    padding: 0;
+    height: 100%;
+
+    display: flex;
+    gap: .8rem;
+    align-items: center;
+
+    img{
+        height: 100%;
+        width: auto;
+    }
+
+}
+
+.perfil__infoDropdown{
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+}
+
+.perfil__nombreCargo{
+    text-align: left;
+}
+
+.perfil__nombre{
+    font-size: 1.1rem;
+    font-family: bold;
+}
+
+.perfil__cargo{
+    margin-top: -.3rem;
+    font-size: .8rem;
+    color: $rojoPrincipal;
+}
+
+.perfil__flechaAbajo{
+    height: max-content;
+}

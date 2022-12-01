@@ -1,0 +1,415 @@
+{
+  "GENERAL": {
+    "ITEMS": "items",
+    "RESULTS": "Resultados",
+    "FOR_PAGE": "por pagina",
+    "PAGE": "Pagina",
+    "OF": "de",
+    "QUANTITY_DATES": "Cantidad de datos",
+    "MONDAY": "Lunes",
+    "TUESDAY": "Martes",
+    "WEDNESDAY": "Miercoles",
+    "THURSDAY": "Jueves",
+    "FRIDAY": "Viernes",
+    "SATURDAY": "Sabado",
+    "SUNDAY": "Domingo"
+  },
+  "WELCOME": {
+    "WELCOME": "Bienvenido",
+    "MESSAGE_WELCOME": "Para continuar debemos configurar todo para contar con todo  el poder de la herramienta, inicia dando click en configuración, o da"
+  },
+  "MENU": {
+    "CONFIGURATIONS": {
+      "TITLE": "Configuraciones",
+      "CONNECTIONS": {
+        "TITLE": "Conexiones",
+        "CONNECTIONS_CREATED": "Conexiones creadas",
+        "CREATE_CONNECTION": "Crear conexion",
+        "NAME": "Nombre",
+        "TYPE": "Tipo",
+        "URL": "Url",
+        "USER": "Usuario",
+        "PASSWORD": "Contraseña",
+        "ENVIRONMENT": "Ambiente",
+        "FONT": "Fuente",
+        "PRODUCTION": "Produccción",
+        "TESTS": "Pruebas",
+        "NEW_CONNECTION": "Nuvea conexión",
+        "CONFIGURATION": "Configuración",
+        "TEST": "Prueba",
+        "CREATION": "Creación",
+        "PRUEBAS": "Pruebas",
+        "PRODUCCION": "Producción"
+      },
+      "TABLES": "Tablas",
+      "USERS": "Usuarios",
+      "JOBS": "Jobs"
+    },
+    "BUSINESS_ENTITIES": {
+      "TITLE": "Entidades de negocio",
+      "SCHEME_1": "Esquema 1",
+      "SCHEME_2": "Esquema 2",
+      "ENTITIES": {
+        "ENTITIES": "Entidades",
+        "SCHEMES": "Esquemas",
+        "CLIENTS": "Clientes",
+        "LAST_PROFILING": "Último perfilamiento",
+        "LAST_UPDATE": "Última actualización",
+        "DATA_MANAGEMENT": {
+          "TITLE": "Administración datos",
+          "GET_INTO_QUERY": "Ingresar consulta",
+          "SINGLE_ENTITIES": "Enitdades unicas",
+          "POSSIBLE_DUPLICATES": "Posibles duplicados",
+          "ID": "Identificación",
+          "NATIONALITY": "Nacionalidad",
+          "CITY": "Ciudad",
+          "DATE_OF_BIRTH": "Fecha de nacimiento",
+          "GENDER": "Género",
+          "LAST_NAME": "Apellido",
+          "NAME": "Nombre",
+          "FREQUENT_FLYER": "N. Viajero frecuente",
+          "EMAIL": "Correo",
+          "PERCENTAGE_QUALITY": "% de calidad",
+          "BROKEN_RULES": "Reglas incumplidas"
+        },
+        "ATTRIBUTES": {
+          "TITLE": "Atributos",
+          "CODE": "Código",
+          "NAME": "Nombre",
+          "PERCENTAGE_QUALITY": "% de calidad",
+          "CONCEPT": "Concepto",
+          "LABELS": "Etiquetas",
+          "USOS": "Usos",
+          "ACTIONS": "Acciones",
+          "CREATE_NEW_ATTRIBUT": "Crear nuevo atributo",
+          "STEWARD": "Steward"
+        },
+        "QUALITY": {
+          "TITLE": "Calidad",
+          "RULES": "Reglas",
+          "CODE": "Código",
+          "NAME": "Nombre",
+          "PERCENTAGE_CASH": "% efectivo",
+          "TYPE": "Tipo",
+          "ACTION": "Acción",
+          "ACTIONS": "Acciones",
+          "CREATE_NEW_RULE": "Crear nueva regla",
+          "DESCRIPTION": "Descripción",
+          "TYPIFICATION": "Tipificación",
+          "MINIMUM": "Mínimo",
+          "MAXIMUM": "Máximo",
+          "GRAVITY": "Gravedad",
+          "ERROR": "Error",
+          "WARNING": "Advertencia",
+          "INFORMATION": "Información",
+          "ADDITIONAL_CONDITIONS": "Condiciones adicionales",
+          "ASSIGNMENT": "Asignación",
+          "ASSIGNMENT_TYPE": "Tipo asignación",
+          "ASSIGNMENT_VALUE": "Valor asignación",
+          "MESSAGE_SEVERITY": "Gravedad del mensaje",
+          "MESSAGE": "Mensaje",
+          "ASSOCIATE_ATTRIBUTE": "Asociar atributos",
+          "SEARCH_ATTRIBUTE": "Buscar atributos",
+          "CONCEPT": "Concepto",
+          "LABELS": "Etiquetas"
+        },
+        "USES": {
+          "TITLE": "Usos",
+          "CODE": "Código",
+          "NAME": "Nombre",
+          "PERCENTAGE_QUALITY": "% de calidad",
+          "STEWARD": "Steward",
+          "CONCEPT": "Concepto",
+          "ATTRIBUTES": "Atributos",
+          "ACTIONS": "Acciones",
+          "ASSOCIATE_ATTRIBUTE": "Asociar atributos",
+          "CREATE_USE": "Crear uso"
+        },
+        "SOURCE": {
+          "TITLE": "Fuentes",
+          "TYPE": "Tipo",
+          "NAME": "Nombre",
+          "CONNECTION": "Conexión",
+          "TABLE": "Tabla",
+          "ATTRIBUTES": "Atributos",
+          "ROWS": "Filas",
+          "PERCENTAGE_QUALITY": "% de calidad",
+          "ROWS_ISSUES": "Filas issues",
+          "LAST_LOAD": "Última carga",
+          "LAST_PROFILING": "Último perfilamiento",
+          "ACTIONS": "Acciones",
+          "ASSOCIATE_SOURCE": "Asociar fuente",
+          "CREATE_NEW_SOURCE": "Crear nueva fuente"
+        },
+        "MACTH": {
+          "TITLE": "Macth",
+          "COURSES_MAP": "Mapas de campo",
+          "TYPE": "Tipo",
+          "ATTRIBUTE": "Atributo",
+          "SOURCE_1": "Fuente 1",
+          "SOURCE_2": "Fuente 2",
+          "PREFERRED_SOURCE": "Fuente preferida",
+          "ACTIONS": "Acciones",
+          "CREATE_NEW_MACTH": "Crear nuevo macth",
+          "CODE": "Código",
+          "NAME": "Nombre"
+        },
+        "JOBS": {
+          "TITLE": "Jobs",
+          "TYPE": "Tipo",
+          "NAME": "Nombre",
+          "EXECUTION_SCHEDULE": "Cronograma de ejecución",
+          "LAST_EXECUTION": "Última ejecución",
+          "LAST_ERROR": "Último error",
+          "MEANS_OF_EXECUTION": "Medio de ejecución",
+          "ACTIONS": "Acciones",
+          "DESCRIPTION": "Descripción",
+          "WEBHOOK": "Webhook",
+          "URL": "Url",
+          "SUMMARY": "Resumen",
+          "DISTRIBUTE_EACH": "Repartir cada",
+          "START": "Inicio",
+          "NEVER": "Nunca",
+          "LATER_OF": "Despues de",
+          "DATE": "Fecha",
+          "STEPS": "Pasos",
+          "PROFILE_SOURCE_1": "Perfilar fuente 1",
+          "PROFILE_SOURCE_2": "Perfilar fuente 2",
+          "MACTH": "Macth",
+          "PROFILE_ENTITY": "Perfilar entity",
+          "REMEDY_ENTITY": "Remediar entity",
+          "END": "Fin",
+          "CREATE_NEW_JOB": "Crear nuevo job"
+        }
+      }
+    }
+  },
+  "BUTTONS": {
+    "CLICK_HERE": "click aquí",
+    "CREATE_CONNECTIONS": "Crear conexión",
+    "TEST_CONNECTION": "Probar conexión",
+    "CANCEL_CREATION": "Cancelar creación",
+    "SAVE_CONNECTION": "Guardar conexión",
+    "CREATE_ATTRIBUT": "Crear atributo",
+    "SAVE_ATTRIBUT": "Guardar atributo",
+    "ADD_TAG": "Agregar tag",
+    "CREATE_RULE": "Crear regla",
+    "SAVE_RULE": "Guardar regla",
+    "CREATE_USE": "Crear uso",
+    "SAVE_USE": "Guardar uso",
+    "CREATE_SOURCE": "Crear fuente",
+    "SAVE_SOURCE": "Guardar fuente",
+    "CONFIGURE_RULES": "Configurar reglas",
+    "SAVE_MACTH": "Guardar macth",
+    "ADD_RULE": "Adicionar regla",
+    "CREATE_JOB": "Crear job",
+    "SAVE_JOB": "Guardar job"
+  },
+  "HEADER": {
+    "SEARCH": "Buscar...",
+    "WELCOME": "Bienvenida Peter",
+    "NOTIFICATIONS": {
+      "TITLE": "Notificaciones",
+      "VIEW_ALL": "Ver todo",
+      "LOAD_MORE": "Ver más..",
+      "FIRST": {
+        "TITLE": "Se realiza tu pedido",
+        "TEXT": "Si varios idiomas fusionan la gramática",
+        "TIME": "Hace 3 minutos"
+      },
+      "SECOND": {
+        "TITLE": "James Lemire",
+        "TEXT": "Parecerá un inglés simplificado.",
+        "TIME": "Hace 1 hora"
+      },
+      "THIRD": {
+        "TITLE": "Tu artículo es enviado",
+        "TEXT": "Si varios idiomas fusionan la gramática",
+        "TIME": "Hace 3 minutos"
+      },
+      "FOUR": {
+        "TITLE": "Salena Layfield",
+        "TEXT": "Como un escéptico amigo mío occidental de Cambridge.",
+        "TIME": "hace 10 horas"
+      }
+    },
+    "EXTRA_PAGES": {
+      "TITLE": "Páginas extra"
+    },
+    "LOGIN": {
+      "PROFILE": "Perfil",
+      "MESSAGES": "Mensajes",
+      "TASKBOARD": "Tablero de tareas",
+      "HELP": "Ayudar",
+      "BALANCE": "Equilibrio",
+      "SETTINGS": "Ajustes",
+      "LOCK_SCREEN": "Bloquear pantalla",
+      "LOGOUT": "Cerrar sesión"
+    }
+  },
+  "RIGHTSIDEBAR": {
+    "LAYOUT": {
+      "TEXT": "Diseño",
+      "LIST": {
+        "VERTICAL": "Vertical",
+        "HORIZONTAL": "Horizontal"
+      }
+    },
+    "LAYOUTMODE": {
+      "TEXT": "Modo de diseño",
+      "LIST": {
+        "LIGHT": "Ligero",
+        "DARK": "Oscuro"
+      }
+    },
+    "LAYOUTWIDTH": {
+      "TEXT": "Ancho de diseño",
+      "LIST": {
+        "FLUID": "Líquido",
+        "BOXED": "En caja"
+      }
+    },
+    "LAYOUTPOSITION": {
+      "TEXT": "Posición de diseño",
+      "LIST": {
+        "FIXED": "Reparado",
+        "SCROLLABLE": "Desplazable"
+      }
+    },
+    "TOPBARCOLOR": {
+      "TEXT": "Color de la barra superior",
+      "LIST": {
+        "LIGHT": "Ligero",
+        "DARK": "Oscuro"
+      }
+    },
+    "SIDEBARSIZE": {
+      "TEXT": "Tamaño de la barra lateral",
+      "LIST": {
+        "DEFAULT": "Defecto",
+        "COMPACT": "Compacto",
+        "SMALL": "Pequeño"
+      }
+    },
+    "SIDEBARCOLOR": {
+      "TEXT": "Color de la barra lateral",
+      "LIST": {
+        "LIGHT": "Ligero",
+        "DARK": "Oscuro",
+        "BRAND": "Marca"
+      }
+    }
+  },
+  "MENUITEMS": {
+    "MENU": {
+      "TEXT": "Menú"
+    },
+    "DASHBOARDS": {
+      "TEXT": "Tablero"
+    },
+    "APPS": {
+      "TEXT": "Aplicaciones",
+      "LIST": {
+        "CALENDAR": "Calendario",
+        "CHAT": "Chat",
+        "EMAIL": "Correo electrónico",
+        "SUB": {
+          "INBOX": "Bandeja de entrada",
+          "READEMAIL": "Leer el correo electrónico"
+        }
+      }
+    },
+    "AUTHENTICATION": {
+      "TEXT": "Autenticación",
+      "BADGE": "Nuevo",
+      "LIST": {
+        "LOGIN": "Acceso",
+        "LOGIN1": "Iniciar sesión1",
+        "REGISTER": "Registrarse",
+        "REGISTER1": "Registrarse1",
+        "RECOVERPWD": "Recuperar contraseña",
+        "RECOVERPWD1": "Recuperar contraseña1",
+        "LOCKSCREEN": "Bloquear pantalla",
+        "CONFIRMMAIL": "Confirmar correo",
+        "EMAILVERIFICATION": "Verificacion de email",
+        "TWOSTEPVERIFICATION": "Verificación de dos pasos"
+      }
+    },
+    "PAGES": {
+      "TEXT": "Paginas",
+      "LIST": {
+        "STARTER": "Página de inicio",
+        "PROFILE": "Perfil",
+        "INVOICE": "Factura",
+        "MAINTENANCE": "Mantenimiento",
+        "COMINGSOON": "Próximamente, en breve, pronto",
+        "TIMELINE": "Cronología",
+        "PRICING": "Precios",
+        "ERROR404": "error 404",
+        "ERROR500": "Error 500"
+      }
+    },
+    "ADMINKIT": {
+      "TEXT": "KIT DE ADMINISTRADOR"
+    },
+    "UIELEMENTS": {
+      "TEXT": "Elementos de la interfaz de usuario"
+    },
+    "ADVANCEDKIT": {
+      "TEXT": "Kit avanzado",
+      "LIST": {
+        "SWEETALERT": "Alerta dulce",
+        "RANGESLIDER": "Control deslizante de rango",
+        "NOTIFICATIONS": "notificaciones",
+        "CAROUSEL": "carrusel"
+      }
+    },
+    "TYPOGRAPHY": {
+      "TEXT": "Tipografía"
+    },
+    "FORMS": {
+      "TEXT": "Formularios",
+      "BADGE": "nueve",
+      "LIST": {
+        "ELEMENTS": "Elementos de formulario",
+        "ADVANCED": "Formulario avanzado"
+      }
+    },
+    "TABLES": {
+      "TEXT": "Mesas",
+      "LIST": {
+        "BASIC": "Tablas de Bootstrap",
+        "ADVANCED": "Tabla de datos"
+      }
+    },
+    "CHARTS": {
+      "TEXT": "Gráficos"
+    },
+    "ICONS": {
+      "TEXT": "Iconos",
+      "LIST": {
+        "BOXICONS": "Boxicons",
+        "MATERIALDESIGN": "Diseño de materiales",
+        "DRIPICONS": "Dripicons",
+        "FONTAWESOME": "Fuente impresionante"
+      }
+    },
+    "MAPS": {
+      "TEXT": "Mapas"
+    },
+    "MULTILEVEL": {
+      "TEXT": "Multi nivel",
+      "LIST": {
+        "LEVEL1": {
+          "1": "Nivel 1.1",
+          "2": "Nivel 1.2",
+          "LEVEL2": {
+            "1": "Nivel 2.1",
+            "2": "Nivel 2.2"
+          }
+        }
+      }
+    }
+
+  }
+}

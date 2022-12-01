@@ -1,0 +1,35 @@
+.buscador{
+    padding: 0;
+    border-radius: 12px;
+    border: solid 1px $grisInput;
+    width: 80%;
+}
+
+.buscador__input{
+    color: $textColor;
+
+    &::placeholder{
+        color: $grisInput !important;
+    }
+
+    &::before{
+        content: '';
+
+    }
+}
+
+.buscador__icono--izq{
+    left: 13px;
+
+    .buscador__svg{
+        width: 15px;
+    }
+}
+
+.buscador__icono--der{
+    right: 13px;
+
+    .buscador__svg{
+        width: 10px;
+    }
+}

@@ -1,0 +1,152 @@
+.headerClientes{
+    background-color: $blancoPrincipal;
+    padding: 1rem;
+    box-shadow: $boxShadow;
+    border-radius: 15px;
+    margin-bottom: 1.5rem;
+
+    .breadcrumb{
+        padding-bottom: .8rem;
+        border-bottom: solid 1px $grisCustomer;
+    }
+
+    .headerClientes__wrapperTop{
+        padding: 1rem 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+
+        @include media(md){
+            padding: 1rem 0;
+            justify-content: space-evenly;
+        }
+    }
+
+    .headerClientes__esquema{
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+    }
+
+    .headerClientes__icono{
+        width: 55px;
+        height: 55px;
+        display: grid;
+        place-items: center;
+        background-color: rgba(227, 0, 30, 0.06);
+        clip-path: polygon(50% 0, 95% 30%, 95% 70%, 50% 100%, 5% 70%, 5% 30%);
+    }
+
+    .headerClientes__svg{
+        width: 15px;
+        margin-left: -5px;
+    }
+
+    .headerClientes__nombre{
+        color: $azulPrincipal;
+        p{
+            font-family: light;
+            font-size: .9rem;
+        }
+
+        h3{
+            margin-top: -.2rem;
+            font-size: 1.2rem;
+            font-family: regular;
+        }
+    }
+
+    .headerClientes__fechas{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        gap: 1rem;
+
+        @include media(sm){
+            gap: .5rem;
+        }
+    }
+
+    .headerClientes__actualizacion{
+        background-color: $actualizacionColor;
+        border-radius: 8px;
+    }
+
+    .headerClientes__actualizacion, .headerClientes__perfilamiento{
+        padding: .5rem 1rem;
+        text-align: right;
+
+        @include media(sm){
+            padding: 1rem 2rem;
+        }
+    }
+
+    .headerClientes__fechaHora{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: .5rem;
+        &::before{
+            content: '';
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            background-image: url(../../../../../images/clock.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    }
+    .headerClientes__leyenda{
+        font-family: light;
+        font-size: .8rem;
+        color: $textoCustomer;
+    }
+
+    .headerClientes__wrapperBot{
+        padding: 0 1rem;
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-start;
+
+        @include media(md){
+            justify-content: center;
+        }
+    }
+
+    .headerClientes__card{
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+        padding: 1rem;
+        width: 220px;
+        border-radius: 12px;
+        border: solid 1px $grisInput;
+    }
+
+    .headerClientes__circle{
+        width: 60px;
+        height: 60px;
+        border-radius: 100px;
+        background-color: $grisInput;
+    }
+
+    .headerClientes__subtitulo{
+        font-family: light;
+        font-size: .9rem;
+        color: $azulPrincipal;
+    }
+
+    .headerClientes__titulo{
+            font-family: semibold;
+            font-size: 1.7rem;
+            color: $azulPrincipal;
+        span{
+            font-family: semibold;
+            font-size: 1.7rem;
+            color: $azulPrincipal;
+        }
+    }
+}

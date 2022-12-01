@@ -1,0 +1,12 @@
+<div class="card-body bienvenida">
+  <div class="bienvenida__imagen">
+    <img [src]="imageBienvenida" alt="" class="bienvenida__img img-fluid mx-auto d-block">
+  </div>
+
+  <div class="card-title text-center bienvenida__texto">
+    <h1 class="bienvenida__titulo">{{'WELCOME.WELCOME' | translate}}</h1>
+    <p class="bienvenida__parrafo">{{'WELCOME.MESSAGE_WELCOME' | translate}}
+      <a [routerLink]="url" class="bienvenida__cta">{{'BUTTONS.CLICK_HERE'  | translate}}</a>
+    </p>
+  </div>
+</div>

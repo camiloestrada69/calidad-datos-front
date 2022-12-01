@@ -1,0 +1,43 @@
+.notificacion{
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+}
+
+.notificacion__boton{
+    padding: 0;
+    height: 30px;
+    padding-right: 1rem;
+    border-right: solid 1px $grisInput;
+
+    &:hover{
+        border-color: $grisInput;
+    }
+    .notificacion__svg{
+        width: 20px;
+    }
+
+    .notificacion__alerta{
+        height: 0.3rem;
+        width: 0.3rem;
+        border-radius: 50px;
+        font-size: 0rem;
+        text-align: center;
+        display: grid;
+        place-items: center;
+        background-color: $rojoPrincipal !important;
+        font-family: regular;
+    }
+}
+
+.noti-icon{
+    .badge{
+        top: 7px;
+        right: 17px;
+    }
+}
+
+.notificacion__contenido{
+    display: flex;
+}

@@ -1,0 +1,36 @@
+.keywo, .keywo__der{
+    position: relative;
+    padding: 0;
+    .keywo__search{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 10px;
+        svg{
+            width: 17px;
+            fill: #413434;
+        }
+
+        .keywo__svg--red{
+            fill: $rojoPrincipal;
+        }
+    }
+
+
+    .keywo__input{
+        padding-left: 32px;
+        margin: 0;
+    }
+}
+
+.keywo__der{
+    .keywo__search{
+        left: auto;
+        right: 10px;
+    }
+
+
+    .keywo__input{
+        padding-right: 32px;
+    }
+}

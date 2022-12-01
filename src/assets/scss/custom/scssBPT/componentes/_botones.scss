@@ -1,0 +1,100 @@
+.botonRojo{
+    text-align: center;
+    cursor: pointer;
+    display: inline-block;
+    padding: .5rem 1rem;
+    box-shadow: $boxShadowButton;
+    background-color: $blancoPrincipal;
+    font-family: semibold;
+    color: $rojoPrincipal;
+    border-radius: 100px;
+    border: solid 2px $grisInput;
+    font-size: 1rem;
+    width: 250px;
+    transition: background-color .2s ease;
+
+    &:hover{
+        border-color: transparent;
+        background-color: $rojoPrincipal;
+        color: $blancoPrincipal;
+    }
+}
+
+.botonRojo--activo{
+    border-color: transparent;
+    background-color: $rojoPrincipal;
+    color: $blancoPrincipal;
+}
+
+.botonGris{
+    font-size: 1rem;
+    text-align: center;
+    width: 250px;
+    padding: .5rem 1rem;
+    color: $azulPrincipal;
+    background-color: $grisBoton;
+    border-radius: 100px;
+    border: solid 2px $bordeGris;
+    transition: background-color .2s ease;
+
+    &:hover{
+        color: $azulPrincipal;
+        background-color: $bordeGris;
+    }
+}
+
+.botonUnderline{
+    cursor: pointer;
+    display: inline-block;
+    font-family: semibold;
+    color: $azulPrincipal;
+
+    &:hover{
+        color: $azulPrincipal;
+        text-decoration: underline !important;
+    }
+}
+
+.botonAzul, .botonNaranja, .botonMorado{
+    cursor: pointer;
+    display: inline-block;
+    padding: .2rem 1.5rem;
+    border: solid 1px;
+    font-family: bold;
+    font-size: .8rem;
+    border-radius: 100px;
+    transition: background-color .2s ease;
+}
+
+.botonAzul{
+    color: $bordeAzul;
+    background-color: $azulBoton;
+    border-color: $bordeAzul;
+    
+    &:hover{
+        color: $blancoPrincipal;
+        background-color: $bordeAzul;
+    }
+}
+
+.botonMorado{
+    color: $textoMorado;
+    background-color: $moradoBoton;
+    border-color: $bordeMorado;
+    
+    &:hover{
+        color: $blancoPrincipal;
+        background-color: $bordeMorado;
+    }
+}
+
+.botonNaranja{
+    color: $bordeNaranja;
+    border-color: $bordeNaranja;
+    background-color: $naranjaBoton;
+
+    &:hover{
+        color: $blancoPrincipal;
+        background-color: $bordeNaranja;
+    }
+}

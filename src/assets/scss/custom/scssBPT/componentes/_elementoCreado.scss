@@ -1,0 +1,14 @@
+.elementoCreado{
+    width: max-content;
+    label{
+        font-family: bold;
+        color: $textColor;
+    }
+
+    .elementoCreado__item{
+        margin-left: .5rem;
+        padding-left: .5rem;
+        border-left: solid 1px $grisCustomer;
+        font-family: regular;
+    }
+}

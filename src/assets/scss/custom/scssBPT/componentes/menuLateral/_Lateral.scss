@@ -1,0 +1,19 @@
+.vertical-menu{
+    position: relative;
+    top: 0;
+    height: 100%;
+    z-index: 50;
+    transition: width .2s ease;
+}
+
+body[data-sidebar-size="sm"]{
+    .vertical-menu{
+        position: relative;
+    }
+}
+
+body[data-sidebar="dark"]{
+    .vertical-menu{
+        background-color: $blancoPrincipal;
+    }
+}

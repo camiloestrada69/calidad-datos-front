@@ -1,0 +1,51 @@
+.crearUso{
+    .crearUso__body{
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .crearUso__izq{
+        min-width: 280px;
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+
+        @include media(xs){
+            min-width: 100%;
+        }
+    }
+
+    .contenidoInput{
+        width: 100%;
+    }
+
+    .crearUso__der{
+        h3{
+            font-family: regular;
+            font-size: 1rem;
+        }
+        
+        .crearUso__checkboxs{
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+        }
+
+        .crearUso__check{
+            display: flex;
+            gap: .25rem;
+            align-items: center;
+
+            &:nth-child(2){
+                margin-left: 1rem;
+            }
+
+            &:nth-child(3){
+                margin-left: 2rem;
+            }
+        }
+    }
+}

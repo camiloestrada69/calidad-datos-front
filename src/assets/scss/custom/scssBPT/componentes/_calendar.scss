@@ -1,0 +1,21 @@
+.clockpicker{
+    position: relative;
+    max-width: 300px;
+
+    .input-group-text{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 1rem;
+        z-index: 100;
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+
+        svg{
+            width: 20px;
+            height: 20px;
+        }
+    }
+}

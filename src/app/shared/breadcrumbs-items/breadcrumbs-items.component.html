@@ -1,0 +1,8 @@
+<div class="page-title-right">
+  <ol class="breadcrumb m-0">
+    <ng-container class=" breadcrumb__container" *ngFor="let item of breadcrumbItems">
+      <li class="breadcrumb-item breadcrumb__item" [ngClass]="{'active': item.active == true}">{{ item.label | translate }}
+      </li>
+    </ng-container>
+  </ol>
+</div>

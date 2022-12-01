@@ -1,0 +1,29 @@
+.nuevoATRB__campos{
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    border-bottom: solid 1px $grisInput;
+
+    @include media(md){
+        justify-content: space-evenly;
+    }
+}
+
+.contenidoInput{
+    width: 23%;
+
+    @include media(md){
+        width: 40%;
+    }
+
+    @include media(xs){
+        width: 100%;
+    }
+}
+
+.contenidoInput__label{
+    width: 100%;
+    min-width: 250px;
+}

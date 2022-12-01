@@ -1,0 +1,45 @@
+<div class="creacionConexion">
+
+  <div class="card border overflow-hidden creacionConexion__contenido">
+    <div class="creacionConexion__izq">
+      <img src="assets/images/bg-auth.jpg" alt="">
+    </div>
+
+    <div class="creacionConexion__der">
+      <div class="creacionConexion__nombre creacionConexion__datos">
+        <label class="creacionConexion__titulo">{{'MENU.CONFIGURATIONS.CONNECTIONS.NAME' | translate}}</label>
+        <label class="creacionConexion__dato">{{conexion?.nombre}}</label>
+      </div>
+
+      <div class="creacionConexion__url creacionConexion__datos">
+        <label class="creacionConexion__titulo">{{'MENU.CONFIGURATIONS.CONNECTIONS.URL' | translate}}</label>
+        <label class="creacionConexion__dato">{{conexion?.url}}</label>
+      </div>
+
+      <div class="creacionConexion__usuario creacionConexion__datos">
+        <label class="creacionConexion__titulo">{{'MENU.CONFIGURATIONS.CONNECTIONS.USER' | translate}}</label>
+        <label class="creacionConexion__dato">{{conexion?.usuario}}</label>
+      </div>
+
+      <div class="creacionConexion__ambiente creacionConexion__datos">
+        <label class="creacionConexion__titulo">{{'MENU.CONFIGURATIONS.CONNECTIONS.FONT' | translate}}</label>
+        <label class="creacionConexion__dato">{{conexion?.fuente}}</label>
+      </div>
+
+      <div class="creacionConexion__pass creacionConexion__datos">
+        <label class="creacionConexion__titulo">{{'MENU.CONFIGURATIONS.CONNECTIONS.PASSWORD' | translate}}</label>
+        <label class="creacionConexion__dato">{{conexion?.contrasena}}</label>
+      </div>
+
+      <div class="creacionConexion__ambiente creacionConexion__datos" *ngIf="conexion && conexion.ambiente">
+        <label class="creacionConexion__titulo">{{'MENU.CONFIGURATIONS.CONNECTIONS.ENVIRONMENT' | translate}}</label>
+        <a [ngClass]="{'botonAzul': conexion?.ambiente === 'PRODUCCION', 'botonNaranja': conexion?.ambiente === 'PRUEBAS'}">{{'MENU.CONFIGURATIONS.CONNECTIONS.'+conexion.ambiente | translate}}</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="creacionConexion__botones">
+    <button type="button" (click)="guardarConexion()" class="botonRojo">{{'BUTTONS.SAVE_CONNECTION'  | translate}}</button>
+    <a class="botonUnderline">{{'BUTTONS.CANCEL_CREATION'  | translate}}</a>
+  </div>
+</div>

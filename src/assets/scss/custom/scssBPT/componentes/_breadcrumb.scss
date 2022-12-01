@@ -1,0 +1,40 @@
+.breadcrumb{
+    padding: 0;
+}
+
+.breadcrumb__container{
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumb__item{
+    font-family: regular;
+    color: $azulPrincipal;
+
+    display: flex;
+    align-items: center;
+    padding: 0 !important;
+
+    &::before{
+        display: none;
+    }
+
+    &::after{
+        margin: 0 .5rem;
+        content: '';
+        width: 7px;
+        height: 15px;
+        background-image: url(../../../../images/nextBreadcrumb.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+
+    }
+
+    &:last-child{
+        font-family: bold;
+        color: $azulPrincipal;
+        &::after{
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,41 @@
+<div class="pagination">
+  <div class="pagination__left">
+    <select  class="pagination__select"  aria-controls="tickets-table" name="pageSize"
+             [(ngModel)]="size" (ngModelChange)="cambiarPageSize($event)">
+      <option *ngFor="let size of sizes"
+              [ngValue]="size" [selected]="size === size">{{size}}</option>
+    </select>
+    <label class="pagination__label"><b>{{'GENERAL.RESULTS' | translate}}</b> {{'GENERAL.FOR_PAGE' | translate}}</label>
+  </div>
+  <!-- Pagination -->
+
+  <div class="pagination__right pagination-rounded">
+    <nav aria-label="Page navigation example" class="pagination__navegacion">
+      <ul class="pagination__wrapperPag">
+
+        <div class="pagination__izq">
+          <p>{{'GENERAL.PAGE'| translate}} </p>
+          <select class="pagination__select" [(ngModel)]="page" (ngModelChange)="cambiarPagina($event)">
+            <option *ngFor="let item of pages"
+            [ngValue]="item" [selected]="item === page">{{item}}</option>
+          </select>
+          <p> {{'GENERAL.OF'| translate}} <b>0</b></p>
+        </div>
+
+        <div class="pagination__der">
+          <li class="page-item pagination__button">
+            <a class="page-link pagination__link" href="javascript:void(0)"aria-label="Previous">
+              &lt;
+            </a>
+          </li>
+          <li class="page-item pagination__button">
+            <a class="page-link pagination__link" href="javascript:void(0)" aria-label="Next">
+              &gt;
+            </a>
+          </li>
+        </div>
+      </ul>
+    </nav>
+  </div>
+  <!-- End Pagination -->
+</div>

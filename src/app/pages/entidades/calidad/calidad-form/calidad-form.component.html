@@ -1,0 +1,219 @@
+<div class="nuevaRegla navInterna-clientes">
+  <div class="navInterna-clientes__header">
+    <div class="nuevaRegla__breadTitle">
+      <app-breadcrumbs-items [breadcrumbItems]="breadCrumbItems"></app-breadcrumbs-items>
+      <h2 class="navInterna-clientes__title">{{'MENU.BUSINESS_ENTITIES.ENTITIES.QUALITY.CREATE_NEW_RULE' | translate}}</h2>
+    </div>
+
+    <div class="navInterna-clientes__botones">
+      <a (click)="$event" class="botonGris">{{'BUTTONS.CANCEL_CREATION' | translate}}</a>
+      <a (click)="$event" class="botonRojo botonRojo--activo">{{'BUTTONS.SAVE_RULE' | translate}}</a>
+    </div>
+  </div>
+
+  <div class="nuevaRegla__campos">
+    <div class="contenidoInput">
+      <label for="codigo" class="form-label contenidoInput__label">{{'MENU.BUSINESS_ENTITIES.ENTITIES.QUALITY.CODE' | translate}}<span class="contenidoInput__asterisco"> *</span></label>
+      <input class="form-control" type="text" value="Url" placeholder="Url" id="codigo">
+    </div>
+    <div class="contenidoInput">
+      <label for="nombre" class="form-label contenidoInput__label">{{'MENU.BUSINESS_ENTITIES.ENTITIES.QUALITY.NAME' | translate}}<span class="contenidoInput__asterisco"> *</span></label>
+      <input class="form-control" type="text" id="nombre">
+    </div>
+    <div class="contenidoInput">
+      <label for="nombre" class="form-label contenidoInput__label">{{'MENU.BUSINESS_ENTITIES.ENTITIES.QUALITY.DESCRIPTION' | translate}}<span class="contenidoInput__asterisco"> *</span></label>
+      <input class="form-control" type="text" id="descripcion">
+    </div>
+    <div class="contenidoInput">
+      <div class="contenidoInput__title">{{'MENU.BUSINESS_ENTITIES.ENTITIES.QUALITY.TYPIFICATION' | translate}}</div>
+      <label class="form-label contenidoInput__label">{{'MENU.BUSINESS_ENTITIES.ENTITIES.QUALITY.TYPE' | translate}}<span class="contenidoInput__asterisco"> *</span></label>
+      <select class="form-select" [(ngModel)]="tipificacionSelected" (ngModelChange)="cambiarTipificacion($event)">
+        <option *ngFor="let item of tipificaciones" [ngValue]="item" [selected]="tipificacionSelected.codigo === item.codigo">{{item.nombre}}</option>
+      </select>
+    </div>
+    <ng-container *ngIf="tipificacionSelected.codigo === 4">
+      <div class="dataLenght">
+        <h5 class="dataLenght__title">{{tipificacionSelected.nombre}}</h5>
+        <div class="nuevaRegla__campos nuevaRegla__campos--lenght">
+          <div class="contenidoInput">
+            <label for="minimun" class="form-labe contenidoInput__label">{{'MENU.BUSINESS_ENTITIES.ENTITIES.QUALITY.MINIMUM' | translate}}<span class="contenidoInput__asterisco"> *</span></label>
+            <input class="form-control" type="text" id="minimun">
+          </div>
+          <div class="contenidoInput">
+            <label for="maximun" class="form-label contenidoInput__label">{{'MENU.BUSINESS_ENTITIES.ENTITIES.QUALITY.MAXIMUM' | translate}}<span class="contenidoInput__asterisco"> *</span></label>
+            <input class="form-control" type="text" id="maximun">
+          </div>
+          <div class="contenidoInput">
+            <span class="contenidoInput__label">{{'MENU.BUSINESS_ENTITIES.ENTITIES.QUALITY.GRAVITY' | translate}}<span class="contenidoInput__asterisco"> *</span></span>
+            <div class="dataLenght__wrapperRadio">              
+              <div class="form-check dataLenght__radio">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                       value="option1" checked>
+                <label class="form-check-label contenidoInput__labelCheck" for="inlineRadio1">{{'MENU.BUSINESS_ENTITIES.ENTITIES.QUALITY.ERROR' | translate}}</label>
+              </div>
+              <div class="form-check dataLenght__radio">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                       value="option2">
+                <label class="form-check-label contenidoInput__labelCheck" for="inlineRadio2">{{'MENU.BUSINESS_ENTITIES.ENTITIES.QUALITY.WARNING' | translate}}</label>
+              </div>
+              <div class="form-check dataLenght__radio">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3"
+                       value="option3">
+                <label class="form-check-label contenidoInput__labelCheck" for="inlineRadio3">{{'MENU.BUSINESS_ENTITIES.ENTITIES.QUALITY.INFORMATION' | translate}}</label>
+              </div>
+            </div>
+          </div>
+          <div class="contenidoInput">
+            <label for="condiciones" class="form-label contenidoInput__label">{{'MENU.BUSINESS_ENTITIES.ENTITIES.QUALITY.ADDITIONAL_CONDITIONS' | translate}}<span class="contenidoInput__asterisco"> *</span></label>
+            <input class="form-control" type="text" id="condiciones">
+          </div>
+        </div>
+      </div>
+    </ng-container>
+
+    <ng-container *ngIf="tipificacionSelected.codigo === 5">
+      <div class="blackValue">
+        <h5 class="blackValue__title">{{tipificacionSelected.nombre}}</h5>
+        <div class="contenidoInput__100">
+          <span class="contenidoInput__label">{{'MENU.BUSINESS_ENTITIES.ENTITIES.QUALITY.GRAVITY' | translate}}<span class="contenidoInput__asterisco"> *</span></span>
+          <div class="blackValue__wrapperRadio">
+            <div class="form-check blackValue__radio">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                     value="option1" checked>
+              <label class="form-check-label contenidoInput__labelCheck" for="inlineRadio1">{{'MENU.BUSINESS_ENTITIES.ENTITIES.QUALITY.ERROR' | translate}}</label>
+            </div>
+            <div class="form-check blackValue__radio">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                     value="option2">
+              <label class="form-check-label contenidoInput__labelCheck" for="inlineRadio2">{{'MENU.BUSINESS_ENTITIES.ENTITIES.QUALITY.WARNING' | translate}}</label>
+            </div>
+            <div class="form-check blackValue__radio">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3"
+                     value="option3">
+              <label class="form-check-label contenidoInput__labelCheck" for="inlineRadio3">{{'MENU.BUSINESS_ENTITIES.ENTITIES.QUALITY.INFORMATION' | translate}}</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="contenidoInput__100">
+          <label for="condiciones" class="form-label contenidoInput__label">{{'MENU.BUSINESS_ENTITIES.ENTITIES.QUALITY.ADDITIONAL_CONDITIONS' | translate}}<span class="contenidoInput__asterisco"> *</span></label>
+          <input class="form-control" type="text" id="condiciones">
+          <div class="blackValue__checkBox">
+            <input class="form-check-input" type="checkbox" id="formCheck1">
+            <label class="form-check-label contenidoInput__label" for="formCheck1">
+              {{'MENU.BUSINESS_ENTITIES.ENTITIES.QUALITY.ASSIGNMENT' | translate}}
+            </label>
+          </div>
+        </div>
+
+        <div class="nuevaRegla__campos nuevaRegla__campos--black">
+          <div class="contenidoInput">
+            <label class="form-label contenidoInput__label">{{'MENU.BUSINESS_ENTITIES.ENTITIES.QUALITY.ASSIGNMENT_TYPE' | translate}}<span class="contenidoInput__asterisco"> *</span></label>
+            <select class="form-select">
+              <option>No assignment</option>
+              <option>No assignment</option>
+              <option>No assignment</option>
+            </select>
+          </div>
+          <div class="contenidoInput">
+            <label for="assignmentValue" class="form-label contenidoInput__label">{{'MENU.BUSINESS_ENTITIES.ENTITIES.QUALITY.ASSIGNMENT_VALUE' | translate}}<span class="contenidoInput__asterisco"> *</span></label>
+            <input class="form-control" type="text" id="assignmentValue">
+          </div>
+          <div class="contenidoInput">
+            <label class="form-label contenidoInput__label">{{'MENU.BUSINESS_ENTITIES.ENTITIES.QUALITY.MESSAGE_SEVERITY' | translate}}<span class="contenidoInput__asterisco"> *</span></label>
+            <select class="form-select">
+              <option>No assignment</option>
+              <option>No assignment</option>
+              <option>No assignment</option>
+            </select>
+          </div>
+          <div class="contenidoInput">
+            <label class="form-label contenidoInput__label">{{'MENU.BUSINESS_ENTITIES.ENTITIES.QUALITY.MESSAGE' | translate}}<span class="contenidoInput__asterisco"> *</span></label>
+            <select class="form-select">
+              <option>No assignment</option>
+              <option>No assignment</option>
+              <option>No assignment</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+
+  <div class="nuevaRegla__campos">
+    <div class="contenidoInput">
+      <div class="contenidoInput__title">{{'MENU.BUSINESS_ENTITIES.ENTITIES.QUALITY.ACTION' | translate}}</div>
+      <label class="form-label contenidoInput__label">{{'MENU.BUSINESS_ENTITIES.ENTITIES.QUALITY.ACTION' | translate}}<span class="contenidoInput__asterisco"> *</span></label>
+      <select class="form-select">
+        <option>Select</option>
+        <option>Large select</option>
+        <option>Small select</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="nuevaRegla__campos">
+    <div class="contenidoInput__100">
+      <div class="contenidoInput__title">{{'MENU.BUSINESS_ENTITIES.ENTITIES.QUALITY.ASSOCIATE_ATTRIBUTE' | translate}}</div>
+      <label for="query" class="form-label contenidoInput__label">{{'MENU.BUSINESS_ENTITIES.ENTITIES.QUALITY.SEARCH_ATTRIBUTE' | translate}}<span class="contenidoInput__asterisco"> *</span></label>
+      <div class="keywo__der">
+        <a href="#" class="keywo__search">
+          <svg class="keywo__svg keywo__svg--red" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18.413 18.414">
+            <g transform="translate(0.5 0.5)">
+              <path id="Trazado_24601" data-name="Trazado 24601" d="M17.307,16.794l-5.3-5.3a6.919,6.919,0,1,0-.513.513l5.3,5.3a.363.363,0,1,0,.513-.513ZM6.893,13.06A6.167,6.167,0,1,1,13.06,6.893,6.174,6.174,0,0,1,6.893,13.06Z" transform="translate(0 0)" fill="#fff"/>
+              <path id="Trazado_24601_-_Contorno" data-name="Trazado 24601 - Contorno" d="M17.051,17.914a.857.857,0,0,1-.61-.253l-4.974-4.974a7.419,7.419,0,1,1,1.22-1.22l4.974,4.974a.863.863,0,0,1-.61,1.473ZM6.893,1.226A5.667,5.667,0,1,0,12.56,6.893,5.674,5.674,0,0,0,6.893,1.226Z" transform="translate(0 0)"/>
+            </g>
+          </svg>
+        </a>
+        <input class="form-control keywo__input" type="text" id="query" placeholder="Busquedad por nombre, código o concepto">
+      </div>
+      <div class="table-responsive tableResponsive">
+        <table id="basic-datatable"
+               class="table dt-responsive nowrap datatables no-footer dtr-inline">
+          <thead class="tableResponsive__header">
+            <tr class="tableResponsive__wrapperHeader">
+              <th class="tableResponsive__headerTitulo">{{'MENU.BUSINESS_ENTITIES.ENTITIES.QUALITY.CODE' | translate}}</th>
+              <th class="tableResponsive__headerTitulo">{{'MENU.BUSINESS_ENTITIES.ENTITIES.QUALITY.NAME' | translate}}</th>
+              <th class="tableResponsive__headerTitulo">{{'MENU.BUSINESS_ENTITIES.ENTITIES.QUALITY.CONCEPT' | translate}}</th>
+            </tr>
+          </thead>
+          <tbody *ngFor="let atributo of atributos;let i=index" class="tableResponsive__body">
+          <tr>
+            <td class="tableResponsive__bodyInfo">
+              <ngb-highlight [result]="atributo.codigo" [term]="'codigo'">
+              </ngb-highlight>
+            </td>
+            <td class="tableResponsive__bodyInfo">
+              <ngb-highlight [result]="atributo.nombre" [term]="'nombre'">
+              </ngb-highlight>
+            </td>
+            <td class="tableResponsive__bodyInfo">
+              <ngb-highlight [result]="atributo.concepto" [term]="'concepto'">
+              </ngb-highlight>
+            </td>
+            <td class="tableResponsive__bodyInfo tableResponsive__bodyInfo--actions">
+              <a href="#" class="tableResponsive__bodyButton">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14.239 17.347">
+                  <g id="delete_5_" data-name="delete (5)" transform="translate(0.4 0.4)">
+                    <path id="Trazado_19512" data-name="Trazado 19512" d="M10.383,16.945H3.05a2.318,2.318,0,0,1-1.676-.724A2.52,2.52,0,0,1,.7,14.472V5.2a1.88,1.88,0,0,1,.78-3.591H3.061V1.529A1.933,1.933,0,0,1,3.626.16,1.91,1.91,0,0,1,4.983-.4H8.449A1.91,1.91,0,0,1,9.807.16a1.935,1.935,0,0,1,.565,1.372v.082h1.584a1.88,1.88,0,0,1,.78,3.591v9.267a2.521,2.521,0,0,1-.678,1.75A2.316,2.316,0,0,1,10.383,16.945ZM2.272,5.359v9.113a.835.835,0,0,0,.778.9h7.332a.835.835,0,0,0,.778-.9V5.359Zm-.8-2.17a.3.3,0,0,0,0,.6H11.955a.3.3,0,1,0,0-.6ZM4.636,1.614H8.8v-.09a.347.347,0,0,0-.347-.351H4.983a.344.344,0,0,0-.244.1.348.348,0,0,0-.1.25Z" transform="translate(0.003 0.002)" fill="#e3001e"/>
+                  </g>
+                </svg>
+              </a>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="etiquetas">
+    <h4 class="etiquetas__title">{{'MENU.BUSINESS_ENTITIES.ENTITIES.QUALITY.LABELS' | translate}}</h4>
+
+    <div class="etiquetas__botones">
+      <i *ngFor="let etiqueta of etiquetas" class="botonNaranja">{{etiqueta}}<a>x</a></i>
+      <a class="botonGris">{{'BUTTONS.ADD_TAG' | translate}}</a>
+    </div>
+  </div>
+
+</div>

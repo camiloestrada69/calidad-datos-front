@@ -1,0 +1,16 @@
+<div class="card-body noConexion contenedor">
+  <div class="card-title noConexion__contenedorTitulo">
+    <h4 class="tituloPagina noConexion__titulo">{{titulo | translate}}</h4>
+  </div>
+  <div class="noConexion__contenido">
+
+    <div class="noConexion__imagenParrafo">
+      <img src="assets/images/noConection.png" alt="" class="img-fluid mx-auto d-block noConexion__img">
+      <p class="noConexion__mensaje">{{mensaje | translate}}</p>
+    </div>
+
+    <div class="noConexion__contenedorBoton">
+      <a class="botonRojo" [routerLink]="link?.link">+ {{link?.texto | translate}}</a>
+    </div>
+  </div>
+</div>

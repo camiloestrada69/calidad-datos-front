@@ -1,0 +1,48 @@
+.crearFuente{
+    .crearFuente__body{
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .crearFuente__izq{
+        min-width: 280px;
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+
+        @include media(xs){
+            min-width: 100%;
+        }
+    }
+
+    .contenidoInput{
+        width: 100%;
+    }
+
+    .crearFuente__der{
+        h3{
+            font-family: regular;
+            font-size: 1rem;
+        }
+
+        .add{
+            margin-top: .5rem;
+            gap: .5rem;
+        }
+
+        .crearFuente__tablas{
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+            margin-left: 1.7rem;
+        }
+
+        h5{
+            font-size: .8rem;
+            font-family: light;
+        }
+    }
+}

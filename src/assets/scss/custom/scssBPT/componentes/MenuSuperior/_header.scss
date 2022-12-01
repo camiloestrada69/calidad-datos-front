@@ -1,0 +1,22 @@
+#page-topbar{
+    position: relative;
+    top: 0;
+    border: none;
+    padding: 1.5rem 2rem;
+    z-index: 1;
+}
+
+.navbar-header{
+    background-color: $blancoPrincipal;
+    padding: .5rem;
+    border-radius: 15px;
+}
+
+.burgerBuscador{
+    align-items: center;
+    flex-grow: 1;
+}
+
+.notificacionPerfil, .burgerBuscador{
+    height: 100%;
+}

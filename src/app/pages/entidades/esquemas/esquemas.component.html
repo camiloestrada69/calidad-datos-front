@@ -1,0 +1,14 @@
+<app-header-esquema></app-header-esquema>
+<div class="bodyClientes">
+  <ul class="navClientes nav-tabs nav-tabs-custom nav-justified"  ngbNav #nav3="ngbNav" [activeId]="itemSelected" (navChange)="ruteo($event)">
+    <li *ngFor="let item of navItems" [ngbNavItem]="item" class="{{item.clase}}">
+      <a ngbNavLink>
+        <p class="navClientes__enlace">{{item.label}}</p>
+      </a>
+      <ng-template ngbNavContent>
+        <router-outlet></router-outlet>
+      </ng-template>
+    </li>
+  </ul>
+  <div [ngbNavOutlet]="nav3" class="text-muted"></div>
+</div>

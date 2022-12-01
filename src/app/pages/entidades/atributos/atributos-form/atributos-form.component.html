@@ -1,0 +1,46 @@
+<div class="navInterna-clientes">
+  <div class="navInterna-clientes__header">
+    <div class="nuevoATRB__breadTitle">
+      <app-breadcrumbs-items [breadcrumbItems]="breadCrumbItems"></app-breadcrumbs-items>
+      <h2 class="navInterna-clientes__title">{{'MENU.BUSINESS_ENTITIES.ENTITIES.ATTRIBUTES.CREATE_NEW_ATTRIBUT' | translate}}</h2>
+    </div>
+    <div class="navInterna-clientes__botones">
+      <a class="botonGris" (click)="$event">{{'BUTTONS.CANCEL_CREATION' | translate}}</a>
+      <a class="botonRojo botonRojo--activo" (click)="$event">{{'BUTTONS.SAVE_ATTRIBUT' | translate}}</a>
+    </div>
+  </div>
+
+  <div class="nuevoATRB__campos">
+    <div class="contenidoInput">
+      <label for="codigo" class="form-label contenidoInput__label">{{'MENU.BUSINESS_ENTITIES.ENTITIES.ATTRIBUTES.CODE' | translate}}<span class="contenidoInput__asterisco"> *</span></label>
+      <input class="form-control" type="text" placeholder="Url" id="codigo">
+    </div>
+  
+    <div class="contenidoInput">
+      <label for="nombre" class="form-label contenidoInput__label">{{'MENU.BUSINESS_ENTITIES.ENTITIES.ATTRIBUTES.NAME' | translate}}<span class="contenidoInput__asterisco"> *</span></label>
+      <input class="form-control" type="text" palceholder="Nombre" id="nombre">
+    </div>
+  
+    <div class="contenidoInput">
+      <label for="concepto" class="form-label contenidoInput__label">{{'MENU.BUSINESS_ENTITIES.ENTITIES.ATTRIBUTES.CONCEPT' | translate}}<span class="contenidoInput__asterisco"> *</span></label>
+      <input class="form-control" type="text" placeholder="Concepto" id="concepto">
+    </div>
+    
+    <div class="contenidoInput">
+      <label class="form-label contenidoInput__label">{{'MENU.BUSINESS_ENTITIES.ENTITIES.ATTRIBUTES.STEWARD' | translate}}<span class="contenidoInput__asterisco"> *</span></label>
+      <select class="form-select">
+        <option>Select</option>
+        <option>Large select</option>
+        <option>Small select</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="etiquetas">
+    <h4 class="etiquetas__title">{{'MENU.BUSINESS_ENTITIES.ENTITIES.ATTRIBUTES.LABELS' | translate}}</h4>
+    <div class="etiquetas__botones">
+      <i *ngFor="let etiqueta of etiquetas" class="botonNaranja">{{etiqueta}}<a>x</a></i>
+      <a class="botonGris">{{'BUTTONS.ADD_TAG' | translate}}</a>
+    </div>
+  </div>
+</div>

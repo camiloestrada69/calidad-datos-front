@@ -1,0 +1,166 @@
+<div class="crearJobs navInterna-clientes">
+  <div class="navInterna-clientes__header">
+    <div class="crearUso__breadTitle">
+      <app-breadcrumbs-items [breadcrumbItems]="breadCrumbItems"></app-breadcrumbs-items>
+      <h2 class="navInterna-clientes__title">{{'MENU.BUSINESS_ENTITIES.ENTITIES.JOBS.CREATE_NEW_JOB' | translate}}</h2>
+    </div>
+
+    <div class="navInterna-clientes__botones">      
+      <a (click)="$event" class="botonGris">{{'BUTTONS.CANCEL_CREATION' | translate}}</a>
+      <a (click)="$event" class="botonRojo botonRojo--activo">{{'BUTTONS.SAVE_JOB' | translate}}</a>
+    </div>
+  </div>
+
+  <div class="crearJobs__campos">
+    <div class="contenidoInput">
+      <label for="nombre" class="form-label contenidoInput__label">{{'MENU.BUSINESS_ENTITIES.ENTITIES.JOBS.NAME' | translate}} *</label>
+      <input class="form-control" type="text" id="nombre">
+    </div>
+
+    <div class="contenidoInput">
+      <label for="descripcion" class="form-label contenidoInput__label">{{'MENU.BUSINESS_ENTITIES.ENTITIES.JOBS.DESCRIPTION' | translate}} *</label>
+      <input class="form-control" type="text" id="descripcion">
+    </div>
+
+    <div class="contenidoInput">
+      <label for="webhook" class="form-label contenidoInput__label">{{'MENU.BUSINESS_ENTITIES.ENTITIES.JOBS.WEBHOOK' | translate}} *</label>
+      <input class="form-control" type="text" id="webhook">
+    </div>
+  </div>
+
+  <div class="crearJobs__campos">
+    <div class="contenidoInput__100">
+      <label for="url" class="form-label contenidoInput__label">{{'MENU.BUSINESS_ENTITIES.ENTITIES.JOBS.URL' | translate}} *</label>
+      <input class="form-control" type="text" id="url">
+    </div>
+  </div>
+
+  <h2 class="navInterna-clientes__title navInterna-clientes__title--gris">{{'MENU.BUSINESS_ENTITIES.ENTITIES.JOBS.EXECUTION_SCHEDULE' | translate}}</h2>
+
+  <div class="crearJobs__campos">
+    <div class="contenidoInput">
+      <label class="form-label contenidoInput__label">{{'MENU.BUSINESS_ENTITIES.ENTITIES.JOBS.LAST_EXECUTION' | translate}} *</label>
+      <select class="form-select" [(ngModel)]="tiempoSeleccionado" (ngModelChange)="cambiarTiempo($event)">
+        <option *ngFor="let item of tiempos"
+                [ngValue]="item" [selected]="tiempoSeleccionado.id === item.id">{{item.nombre}}</option>
+      </select>
+    </div>
+
+    <div class="crearJobs__wrapperResumen">
+      <div class="crearJobs__resumenIcono">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28.118" height="28.125" viewBox="0 0 28.118 28.125">
+          <g id="Icon_ionic-ios-timer" data-name="Icon ionic-ios-timer" transform="translate(-3.938 -3.938)">
+            <path id="Trazado_34644" data-name="Trazado 34644" d="M18,32.063A14.063,14.063,0,0,1,8.241,7.875,1.129,1.129,0,0,1,9.809,9.5a11.8,11.8,0,1,0,9.316-3.248v4.4a1.132,1.132,0,1,1-2.264,0V5.07a1.131,1.131,0,0,1,1.132-1.132A14.063,14.063,0,0,1,18,32.063Z" fill="#2c4bff"/>
+            <path id="Trazado_34645" data-name="Trazado 34645" d="M12.368,11.384l7,5.027A2.117,2.117,0,0,1,16.9,19.856a2.044,2.044,0,0,1-.492-.492l-5.027-7a.705.705,0,0,1,.984-.984Z" fill="#2c4bff"/>
+          </g>
+        </svg>
+      </div>
+      <div class="crearJobs__resumen">
+        <p>{{'MENU.BUSINESS_ENTITIES.ENTITIES.JOBS.SUMMARY' | translate}}</p>
+        <h5>Semanal de lunes a viernes</h5>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrapperSemanal">
+    <h2>Semanal</h2>
+    <div class="wrapperSemanal__repartirDias">
+      <div class="contenidoInput">
+        <label for="repetir" class="form-label contenidoInput__label">{{'MENU.BUSINESS_ENTITIES.ENTITIES.JOBS.DISTRIBUTE_EACH' | translate}} *</label>
+        <input class="form-control" type="text" id="repetir">
+      </div>
+
+      <div class="wrapperSemanal__dias contenidoInput">
+        <label class="contenidoInput__label">Dias *</label>
+        <div class="wrapperSemanal__wrapperChecks">
+          <ng-container *ngFor="let item of semana">
+            <div class="wrapperSemanal__checks">
+              <label>{{item.dia  | translate}}</label>
+              <input class="form-check-input form-check-input--rojo" type="checkbox" [id]="item.id" checked>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrapperSemanal__inicioFin">
+
+      <div class="contenidoInput">
+        <label class="contenidoInput__label">{{'MENU.BUSINESS_ENTITIES.ENTITIES.JOBS.START' | translate}}</label>
+        <div class="input-group clockpicker">
+          <input ngbDatepicker class="form-control" placeholder="yyyy-mm-dd" #d="ngbDatepicker"/>
+          <div class="input-group-append" (click)="d.toggle()">
+            <span class="input-group-text">
+              <svg xmlns="http://www.w3.org/2000/svg"viewBox="0 0 20.251 22.391">
+                <g id="Icon_feather-calendar" data-name="Icon feather-calendar" transform="translate(0.5 0.5)">
+                  <path id="Trazado_34595" data-name="Trazado 34595" d="M6.639,6H21.612a2.2,2.2,0,0,1,2.139,2.249V23.991a2.2,2.2,0,0,1-2.139,2.249H6.639A2.2,2.2,0,0,1,4.5,23.991V8.249A2.2,2.2,0,0,1,6.639,6Z" transform="translate(-4.5 -4.85)" fill="none" stroke="#e3001e" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+                  <path id="Trazado_34596" data-name="Trazado 34596" d="M24,3V5.3" transform="translate(-10.096 -3)" fill="none" stroke="#e3001e" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+                  <path id="Trazado_34597" data-name="Trazado 34597" d="M12,3V5.3" transform="translate(-6.652 -3)" fill="none" stroke="#e3001e" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+                  <path id="Trazado_34598" data-name="Trazado 34598" d="M4.5,15H23.751" transform="translate(-4.5 -6.444)" fill="none" stroke="#e3001e" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+                </g>
+              </svg>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="wrapperSemanal__fin contenidoInput">
+        <label class="contenidoInput__label">{{'MENU.BUSINESS_ENTITIES.ENTITIES.JOBS.END' | translate}} *</label>
+        <div class="wrapperSemanal__boxes">
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked>
+            <label class="form-check-label" for="inlineRadio1">{{'MENU.BUSINESS_ENTITIES.ENTITIES.JOBS.NEVER' | translate}}</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+            <label class="form-check-label" for="inlineRadio2">{{'MENU.BUSINESS_ENTITIES.ENTITIES.JOBS.LATER_OF' | translate}}</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+            <label class="form-check-label" for="inlineRadio3">{{'MENU.BUSINESS_ENTITIES.ENTITIES.JOBS.DATE' | translate}}</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="separador"></div>
+
+  <div class="wrapperPasos">
+    <h2>{{'MENU.BUSINESS_ENTITIES.ENTITIES.JOBS.STEPS' | translate}}</h2>
+    <div class="contenidoInput wrapperPasos__checkboxs">
+      <input class="form-check-input form-check-input--rojo" type="checkbox" id="formCheck1" checked>
+      <label class="form-check-label" for="formCheck1">
+        {{'MENU.BUSINESS_ENTITIES.ENTITIES.JOBS.PROFILE_SOURCE_1' | translate}}
+      </label>
+    </div>
+
+    <div class="contenidoInput wrapperPasos__checkboxs">
+      <input class="form-check-input form-check-input--rojo" type="checkbox" id="formCheck2" checked>
+      <label class="form-check-label" for="formCheck2">
+        {{'MENU.BUSINESS_ENTITIES.ENTITIES.JOBS.PROFILE_SOURCE_2' | translate}}
+      </label>
+    </div>
+
+    <div class="contenidoInput wrapperPasos__checkboxs">
+      <input class="form-check-input form-check-input--rojo" type="checkbox" id="formCheck3" checked>
+      <label class="form-check-label" for="formCheck3">
+        {{'MENU.BUSINESS_ENTITIES.ENTITIES.JOBS.MACTH' | translate}}
+      </label>
+    </div>
+
+    <div class="contenidoInput wrapperPasos__checkboxs">
+      <input class="form-check-input form-check-input--rojo" type="checkbox" id="formCheck4" checked>
+      <label class="form-check-label" for="formCheck4">
+        {{'MENU.BUSINESS_ENTITIES.ENTITIES.JOBS.PROFILE_ENTITY' | translate}}
+      </label>
+    </div>
+
+    <div class="contenidoInput wrapperPasos__checkboxs">
+      <input class="form-check-input form-check-input--rojo" type="checkbox" id="formCheck5" checked>
+      <label class="form-check-label" for="formCheck5">
+        {{'MENU.BUSINESS_ENTITIES.ENTITIES.JOBS.REMEDY_ENTITY' | translate}}
+      </label>
+    </div>
+  </div>
+</div>

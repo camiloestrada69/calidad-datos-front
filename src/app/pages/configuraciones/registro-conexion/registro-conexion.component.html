@@ -1,0 +1,50 @@
+<div class="contenedor crearConexion">
+  <div class="contTituloBread">
+    <app-breadcrumbs-items [breadcrumbItems]="breadCrumbItems"></app-breadcrumbs-items>
+    <h4 class="tituloPagina">{{ 'BUTTONS.CREATE_CONNECTIONS' | translate}}</h4>
+  </div>
+  <div class="container">
+    <div id="stepper1" class="bs-stepper">
+
+      <div class="bs-stepper-header pasos">
+        <div class="step pasos__paso pasos__paso--uno" data-target="#test-l-1">
+          <button class="step-trigger pasos__boton">
+            <span class="bs-stepper-circle pasos__circulo">1</span>
+            <span class="bs-stepper-label pasos__texto">{{'MENU.CONFIGURATIONS.CONNECTIONS.CONFIGURATION' | translate}}</span>
+          </button>
+        </div>
+        <div class="step pasos__paso pasos__paso--dos" data-target="#test-l-2">
+          <button class="step-trigger pasos__boton">
+            <span class="bs-stepper-circle pasos__circulo">2</span>
+            <span class="bs-stepper-label pasos__texto">{{'MENU.CONFIGURATIONS.CONNECTIONS.TEST' | translate}}</span>
+          </button>
+        </div>
+        <div class="step pasos__paso pasos__paso--tres" data-target="#test-l-3">
+          <button class="step-trigger pasos__boton">
+            <span class="bs-stepper-circle pasos__circulo">3</span>
+            <span class="bs-stepper-label pasos__texto">{{'MENU.CONFIGURATIONS.CONNECTIONS.CREATION' | translate}}</span>
+          </button>
+        </div>
+        <div class="line pasos__linea"></div>
+      </div>
+
+      <div class="bs-stepper-content conexionContenido">
+        <form (ngSubmit)="onSubmit()">
+
+          <div id="test-l-1" class="content">
+            <app-configuracion-conexion  [conexion]="nuevaConexion" (submit)="probarConexion($event)"></app-configuracion-conexion>
+          </div>
+
+          <div id="test-l-2" class="content pruebaConexion">
+            <h4>Prueba conexión</h4>
+          </div>
+
+          <div id="test-l-3" class="content text-center">
+            <app-creacion-conexion [conexion]="nuevaConexion" [isActualizacion]="isActualizacion"></app-creacion-conexion>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

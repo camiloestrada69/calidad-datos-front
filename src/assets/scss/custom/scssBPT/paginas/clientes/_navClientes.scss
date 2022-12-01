@@ -1,0 +1,98 @@
+.navClientes{
+    padding: 0 1rem;
+    padding-top: .2rem;
+    border-radius: 10px 10px 0 0;
+    background-color: $blancoPrincipal;
+
+    @include media(xs){
+        justify-content: space-evenly;
+    }
+    .nav-item{
+        width: max-content;
+        flex-grow: initial;
+
+        .nav-link{
+            width: max-content;
+
+            &::after{
+                height: 4px;
+                border-radius: 10px;
+                background-color: $rojoPrincipal;
+            }
+        }
+
+        .navClientes__enlace{
+            font-family: regular;
+            font-size: .9rem;
+
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+            &::before{
+                content: '';
+                display: block;
+                height: 15px;
+                width: 15px;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+        }
+    }
+
+    .navClientes__adminDatos{
+        .navClientes__enlace{
+            &::before{
+                background-image: url(../../../../../images/adminDatos.svg);
+            }
+        }
+    }
+
+    .navClientes__atributos{
+        .navClientes__enlace{
+            &::before{
+                background-image: url(../../../../../images/Atributos.svg);
+            }
+        }
+    }
+
+    .navClientes__calidad{
+        .navClientes__enlace{
+            &::before{
+                background-image: url(../../../../../images/calidad.svg);
+            }
+        }
+    }
+
+    .navClientes__usos{
+        .navClientes__enlace{
+            &::before{
+                background-image: url(../../../../../images/Usos.svg);
+            }
+        }
+    }
+
+    .navClientes__fuentes{
+        .navClientes__enlace{
+            &::before{
+                background-image: url(../../../../../images/fuentes.svg);
+            }
+        }
+    }
+
+    .navClientes__match{
+        .navClientes__enlace{
+            &::before{
+                background-image: url(../../../../../images/Match.svg);
+            }
+        }
+    }
+
+    .navClientes__jobs{
+        .navClientes__enlace{
+            &::before{
+                background-image: url(../../../../../images/Jobs.svg);
+            }
+        }
+    }
+}
