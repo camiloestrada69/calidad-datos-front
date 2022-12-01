@@ -1,3 +1,14 @@
+FROM node:latest as node
+WORKDIR /app
+ENV PATH /usr/src/app/node_modules/.bin:$PATH
+COPY .. .
+RUN npm install
+ARG ANGULAR_ENV=qas
+RUN ng build  --configuration $ANGULAR_ENV
+#stage 2
+FROM nginx:alpine
+COPY --from=node /app/dist/ /usr/share/nginx/html
+
 #############
 ### build ###
 #############
@@ -12,7 +23,7 @@ WORKDIR /usr/src/app
 ENV PATH /usr/src/app/node_modules/.bin:$PATH
 
 # install and cache app dependencies
-COPY ./package.json package.json
+COPY ../package.json package.json
 RUN npm install
 
 # add app
@@ -24,23 +35,3 @@ RUN ng build  --configuration $ANGULAR_ENV
 #RUN npm run build  -- --output-path=./dist/out --configuration $ANGULAR_ENV
 
 
-############
-### prod ###
-############
-
-# base image
-FROM nginx:1.17.0-alpine
-
-# copy artifact build from the 'build environment'
-COPY --from=build /usr/src/app/dist /usr/share/nginx/html/
-
-RUN rm -rf /etc/nginx/nginx.conf
-
-
-COPY nginx.conf /etc/nginx/nginx.conf
-
-# expose port 80
-EXPOSE 80
-
-# run nginx
-CMD ["nginx", "-g", "daemon off;"]
