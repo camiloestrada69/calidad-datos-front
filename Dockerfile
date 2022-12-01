@@ -16,7 +16,7 @@ COPY ./package.json package.json
 RUN npm install
 
 # add app
-COPY ./ .
+COPY devops .
 # generate build
 ARG ANGULAR_ENV=qas
 #RUN echo $ANGULAR_ENV
@@ -37,7 +37,7 @@ COPY --from=build /usr/src/app/dist /usr/share/nginx/html/
 RUN rm -rf /etc/nginx/nginx.conf
 
 
-COPY ./devops/nginx.conf /etc/nginx/nginx.conf
+COPY nginx.conf /etc/nginx/nginx.conf
 
 # expose port 80
 EXPOSE 80
