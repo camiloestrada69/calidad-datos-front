@@ -16,7 +16,7 @@ COPY ./package.json package.json
 RUN npm install
 
 # add app
-COPY devops .
+#COPY devops .
 # generate build
 ARG ANGULAR_ENV=qas
 #RUN echo $ANGULAR_ENV
