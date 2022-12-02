@@ -4,7 +4,7 @@ ENV PATH /usr/src/app/node_modules/.bin:$PATH
 COPY . .
 RUN npm install
 ARG ANGULAR_ENV=qas
-RUN ng build  --configuration $ANGULAR_ENV
+RUN ng build  --configuration qas
 #stage 2
 FROM nginx:alpine
 COPY --from=node /app/dist/ /usr/share/nginx/html
