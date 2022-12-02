@@ -26,7 +26,7 @@
             "allowedCommonJsDependencies": [
               "rxjs", "core-js", "simplebar", "ng5-slider", "apexcharts"
             ],
-            "outputPath": "dist",
+            "outputPath": "dist/calidad-datos",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
