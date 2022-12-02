@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { WidgetModule } from './widget/widget.module';
 import { PagetitleComponent } from './pagetitle/pagetitle.component';
 import { ListaVaciaComponent } from './lista-vacia/lista-vacia.component';
 import {RouterLinkWithHref} from '@angular/router';
@@ -19,6 +20,7 @@ import {NgbToastModule} from '@ng-bootstrap/ng-bootstrap';
   ],
     imports: [
         CommonModule,
+        WidgetModule,
         RouterLinkWithHref,
         TranslateModule,
         FormsModule,

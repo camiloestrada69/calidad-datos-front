@@ -56,7 +56,7 @@ export class ConexionesComponent implements OnInit {
   }
 
   refrescarFooter(): void {
-    this.parametros = this.parametros.filter(item => item.label !== LIMIT && item.label !== PAGE);
+    this.parametros = [];
     this.parametros.push({label: LIMIT, value: this.size});
     this.parametros.push({label: PAGE, value: this.page});
     this.consultarConexionesPaginadas();

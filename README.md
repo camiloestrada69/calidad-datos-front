@@ -41,7 +41,6 @@ export ANGULAR_ENV=qas
 docker build -t calidad-datos -f devops/Dockerfile .
 
 ## Running container app
-
 docker run -d -p 80:80 calidad-datos
 
 ## Further help

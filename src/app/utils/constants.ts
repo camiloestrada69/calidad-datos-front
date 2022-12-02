@@ -12,7 +12,7 @@ export const ID = 'id';
 export const LIMIT = 'limit';
 export const PAGE = 'page';
 export const NOMBRE = 'nombre';
-export const AMBIENTE = 'ambiente';
+export const AMBIENTE = 'fuente';
 
 //TODO: varibales de http
 export const HTTP_OPTIONS = {

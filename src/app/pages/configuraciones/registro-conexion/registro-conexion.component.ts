@@ -1,7 +1,7 @@
 import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 import Stepper from 'bs-stepper';
-import {conexiones} from '@utils/mockups';
-import {BREAD_CRUMB_ITEMS_CREAR_CONEXION} from '@utils/constants';
+import {conexiones} from '../../../utils/mockups';
+import {BREAD_CRUMB_ITEMS_CREAR_CONEXION} from '../../../utils/constants';
 import {Conexion} from '@app/core/models/conexion';
 import {filter} from 'rxjs/operators';
 import {map} from 'rxjs/internal/operators';
@@ -23,8 +23,7 @@ export class RegistroConexionComponent implements OnInit {
 
   breadCrumbItems = BREAD_CRUMB_ITEMS_CREAR_CONEXION;
 
-  constructor(private route: ActivatedRoute) {
-  }
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.route.data.pipe(
@@ -35,20 +34,18 @@ export class RegistroConexionComponent implements OnInit {
       this.isActualizacion = true;
     });
     const stepperElement = document.querySelector('#stepper1');
-    if (stepperElement !== null) {
-      this.stepper = new Stepper(stepperElement, {
+    if (stepperElement !== null){
+      this.stepper = new Stepper(stepperElement , {
         linear: false,
         animation: true
       });
     }
   }
-
   next(): void {
     if (this.stepper) {
       this.stepper.next();
     }
   }
-
   onSubmit(): boolean {
     return false;
   }

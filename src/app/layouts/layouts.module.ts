@@ -11,6 +11,7 @@ import { LanguageService } from '../core/services/language.service';
 import { LayoutComponent } from './layout.component';
 import { VerticalComponent } from './vertical/vertical.component';
 import { HorizontalComponent } from './horizontal/horizontal.component';
+import { FooterComponent } from './footer/footer.component';
 import { TopbarComponent } from './topbar/topbar.component';
 import { RightsidebarComponent } from './rightsidebar/rightsidebar.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
@@ -21,6 +22,7 @@ import { HorizontaltopbarComponent } from './horizontaltopbar/horizontaltopbar.c
     LayoutComponent,
     VerticalComponent,
     HorizontalComponent,
+    FooterComponent,
     TopbarComponent,
     RightsidebarComponent,
     SidebarComponent,
