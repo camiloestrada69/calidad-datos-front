@@ -3,10 +3,10 @@ import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms
 import { ActivatedRoute, Router } from '@angular/router';
 import { first } from 'rxjs/operators';
 
-import { AuthenticationService } from '../../../core/services/auth.service';
-import { AuthfakeauthenticationService } from '../../../core/services/authfake.service';
-import { environment } from '../../../../environments/environment';
-import { LAYOUT_MODE } from '../../../layouts/layouts.model';
+import { AuthenticationService } from '@service/auth.service';
+import { AuthfakeauthenticationService } from '@service/authfake.service';
+import { environment } from '@env/environment';
+import { LAYOUT_MODE } from '@app/layouts/layouts.model';
 
 @Component({
   selector: 'app-login',

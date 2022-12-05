@@ -12,9 +12,6 @@ import { LockscreenComponent } from './lockscreen/lockscreen.component';
 import { ConfirmmailComponent } from './confirmmail/confirmmail.component';
 import { EmailverificationComponent } from './emailverification/emailverification.component';
 import { SteptwoverificationComponent } from './steptwoverification/steptwoverification.component';
-import { Login1Component } from './login1/login1.component';
-import { Register1Component } from './register1/register1.component';
-import { Recoverpwd1Component } from './recoverpwd1/recoverpwd1.component';
 
 @NgModule({
   declarations: [
@@ -24,10 +21,7 @@ import { Recoverpwd1Component } from './recoverpwd1/recoverpwd1.component';
     LockscreenComponent,
     ConfirmmailComponent,
     EmailverificationComponent,
-    SteptwoverificationComponent,
-    Login1Component,
-    Register1Component,
-    Recoverpwd1Component
+    SteptwoverificationComponent
   ],
   imports: [
     CommonModule,
