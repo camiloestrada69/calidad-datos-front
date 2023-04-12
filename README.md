@@ -27,6 +27,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 ## Generate directories coverage and reports
 Verificar que la dependencia de karma-sonarqube-reporter de angular se encuentre instalada para poder generar la carpeta de reports donde se generaria un archivo con extensiòn xml con todos los test del proyecto y adicionar la configuraciòn corespondiente de la dependencia
+Tambien se debe verificar que la dependencia de sonar-scanner se encuentre instalada para poder ejecutar el comando de sonar-scanner
 ng test --no-watch --code-coverage
 
 ### Running sonar
@@ -41,6 +42,7 @@ export ANGULAR_ENV=qas
 docker build -t calidad-datos -f devops/Dockerfile .
 
 ## Running container app
+
 docker run -d -p 80:80 calidad-datos
 
 ## Further help
